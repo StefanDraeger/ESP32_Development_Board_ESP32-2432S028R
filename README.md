@@ -18,3 +18,4 @@ Auf der Rückseite findest du eine RGB LED welche wir in der Infografik zu sehen
 #### setzen einer Farbe
 [Quellcode für das einfache setzen einer Farbe an der RGB LED](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/RGB-LED/ESP32_Development_Board_RGB_LED_set_color)
 ![RGB LED in der Farbe lila am ESP32 Development Board](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_RGB_LED_violet.png)
+#### Anzeigen von "Hallo Welt!" auf dem TFT Display

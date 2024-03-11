@@ -6,7 +6,7 @@ Einen ausführlichen Artikel zu diesem Mikrocontroller findest du auf meinem Blo
 ![Rückseite ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_2.8Inch_Touch_2.png)
 ### Pinbelegung
 ![Aufbau des ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/Aufbau_ESP32_Developmentboard_Touch_Display.png)
-![Pinbelegung des ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_DevelopmentBoard_Pins.png)
+![Pinbelegung des ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Pins.png)
 ### Beispiele
 Fangen wir mit ein paar Beispielen an. (Von einfach bis komplex.) 
 #### RGB LED

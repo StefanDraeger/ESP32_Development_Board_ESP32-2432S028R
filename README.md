@@ -26,4 +26,5 @@ Auf der Rückseite findest du eine RGB LED welche wir in der Infografik zu sehen
 #### Anzeigen von einem Bild auf dem TFT Display
 Damit du ein Bild auf dem TFT Display anzeigen kannst, muss dieses auf den Mikrocontroller hochgeladen werden. Wie du dieses machst habe ich dir unter [Beispiel – Bild auf dem TFT-Display anzeigen](https://draeger-it.blog/esp32-development-board-mit-2-8-zoll-touch-display-programmieren-fuer-anfaenger#beispiel-bild-auf-dem-tftdisplay-anzeigen) ausführlich erläutert.
 Du benötigst zum Anzeigen dann das kleine Programm "LittleFS_PNG" aus den Beispielen.
+
 ![Logo auf dem TFT-Display des ESP32 Development Boards](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Logo.jpg)

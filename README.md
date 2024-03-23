@@ -28,3 +28,9 @@ Damit du ein Bild auf dem TFT Display anzeigen kannst, muss dieses auf den Mikro
 Du benötigst zum Anzeigen dann das kleine Programm "LittleFS_PNG" aus den Beispielen.
 
 ![Logo auf dem TFT-Display des ESP32 Development Boards](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Logo.jpg)
+
+#### Erkennen einer Touchaktion am TFT Display
+
+[Quellcode für das erkennen einer Touchaktion am Display](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_TFT_Touch_simple)
+
+![erkannte X&Y Koordinate am Touchdisplay](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/Touchaktion_ESP32_Development_Board.png)

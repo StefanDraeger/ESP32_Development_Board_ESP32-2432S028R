@@ -34,3 +34,9 @@ Du benötigst zum Anzeigen dann das kleine Programm "LittleFS_PNG" aus den Beisp
 [Quellcode für das erkennen einer Touchaktion am Display](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_TFT_Touch_simple)
 
 ![erkannte X&Y Koordinate am Touchdisplay](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/Touchaktion_ESP32_Development_Board.png)
+
+#### Zeichnen von einfachen Buttons auf dem Display mit Touchaktion
+
+[Quellcode für das zeichnen von Buttons auf dem Display](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_TFT_Touch_Buttons)
+
+![einfache Buttons auf dem Display](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Buttons.jpg)

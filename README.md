@@ -46,3 +46,9 @@ Du benötigst zum Anzeigen dann das kleine Programm "LittleFS_PNG" aus den Beisp
 [Quellcode für das zeichnen von Buttons und dem steuern von LEDs](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_TFT_Touch_Buttons_LEDs)
 
 ![einfache Buttons auf dem Display](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Buttons_control_LED.jpg)
+
+#### Bildschirmtastatur
+
+[Quellcode für das darstellen einer Bildschirmtastatur auf dem ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_TFT_Touch_Keyboard)
+
+![kleine Bildschirmtastatur auf dem ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32-2432S028R_onscreen_keyboard.png)

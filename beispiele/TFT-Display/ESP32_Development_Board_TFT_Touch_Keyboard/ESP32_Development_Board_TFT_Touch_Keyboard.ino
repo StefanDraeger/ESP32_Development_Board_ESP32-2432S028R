@@ -27,45 +27,43 @@ uint8_t RED = lcd.color332(238, 65, 65);
 uint8_t GREEN = lcd.color332(86, 217, 86);
 
 struct Button {
-  uint8_t backgroundcolor;  //Hintergrundfarbe
-  uint8_t textcolor;        //Textfarbe
-  int coord_x;
-  int coord_y;
+  int coord_x;              //X Koordinate der Schaltfläche
+  int coord_y;              //Y Koordinate der Schaltfläche
   String caption1;          //Text normal
   String caption2;          //Text umgeschaltet
 };
 
 struct InputField {
-  uint8_t backgroundcolor;
-  uint8_t bordercolor;
-  uint8_t textcolor;
-  int coord_x;
-  int coord_y;
-  int width;
-  int height;
+  uint8_t backgroundcolor; //Hintergrundfarbe
+  uint8_t bordercolor;     //Rahmenfarbe
+  uint8_t textcolor;       //Textfarbe
+  int coord_x;             //X Koordinate
+  int coord_y;             //Y Koordinate
+  int width;               //Breite
+  int height;              //Höhe
 };
 
 struct ButtonFunction {
-  uint8_t backgroundcolor;
-  uint8_t textcolor;
-  int coord_x;
-  int coord_y;
-  int width;
-  int height;
-  int roundEdge;
-  String caption;
+  uint8_t backgroundcolor; //Hintergrundfarbe
+  uint8_t textcolor;       //Textfarbe
+  int coord_x;             //X Koordinate der Schaltfläche
+  int coord_y;             //Y Koordinate der Schaltfläche
+  int width;               //Breite
+  int height;              //Höhe
+  String caption;          //Text    
 };
 
-ButtonFunction closeBtn = {RED, WHITE, 253, 38, 20, 20, 5, "X"};
-ButtonFunction backBtn = {LIGHT_GREY, WHITE, 205, 38, 40, 20, 5, "BACK"};
+ButtonFunction closeBtn = {RED, WHITE, 253, 38, 20, 20, "X"};
+ButtonFunction backBtn = {LIGHT_GREY, WHITE, 205, 38, 40, 20, "BACK"};
 
-ButtonFunction shiftBtn = {LIGHT_GREY, WHITE, 38, 158, 47, 20, 5, "SHIFT"};
-ButtonFunction symbolsBtn = {LIGHT_GREY, WHITE, 89, 158, 20, 20, 5, "#"};
-ButtonFunction spaceBtn = {LIGHT_GREY, WHITE, 113, 158, 133, 20, 5, "Space"};
-ButtonFunction okBtn = {GREEN, DARK_GREY, 250, 158, 25, 20, 5, "OK"};
+ButtonFunction shiftBtn = {LIGHT_GREY, WHITE, 38, 158, 47, 20, "SHIFT"};
+ButtonFunction symbolsBtn = {LIGHT_GREY, WHITE, 89, 158, 20, 20, "#"};
+ButtonFunction spaceBtn = {LIGHT_GREY, WHITE, 113, 158, 133, 20, "Space"};
+ButtonFunction okBtn = {GREEN, DARK_GREY, 250, 158, 25, 20, "OK"};
 
 InputField inputField = {WHITE, DARK_GREY, DARK_GREY, 38, 35, 160, 25};
 
+const int BTN_ROUNDEDGE = 2;
 const int BTN_WIDTH = 20;
 const int BTN_HEIGHT = 20;
 const int BTN_MARGIN_HORIZONTAL = 3;
@@ -76,93 +74,38 @@ const int DEFAULT_START_Y = 65;
 int start_X = DEFAULT_START_X;
 int start_Y = DEFAULT_START_Y;
 
-//definieren von zwei Buttons
-Button btn1 = { LIGHT_GREY, WHITE, 0, 0, "1", "!" };
-Button btn2 = { LIGHT_GREY, WHITE, 0, 0, "2", "\"" };
-Button btn3 = { LIGHT_GREY, WHITE, 0, 0, "3", ":" };
-Button btn4 = { LIGHT_GREY, WHITE, 0, 0, "4", "$" };
-Button btn5 = { LIGHT_GREY, WHITE, 0, 0, "5", "%" };
-Button btn6 = { LIGHT_GREY, WHITE, 0, 0, "6", "&" };
-Button btn7 = { LIGHT_GREY, WHITE, 0, 0, "7", "/" };
-Button btn8 = { LIGHT_GREY, WHITE, 0, 0, "8", "(" };
-Button btn9 = { LIGHT_GREY, WHITE, 0, 0, "9", ")" };
-Button btn0 = { LIGHT_GREY, WHITE, 0, 0, "0", "=" };
-
-Button btnQ = { LIGHT_GREY, WHITE, 0, 0, "Q", "q" };
-Button btnW = { LIGHT_GREY, WHITE, 0, 0, "W", "w" };
-Button btnE = { LIGHT_GREY, WHITE, 0, 0, "E", "e" };
-Button btnR = { LIGHT_GREY, WHITE, 0, 0, "R", "r" };
-Button btnT = { LIGHT_GREY, WHITE, 0, 0, "T", "t" };
-Button btnZ = { LIGHT_GREY, WHITE, 0, 0, "Z", "z" };
-Button btnU = { LIGHT_GREY, WHITE, 0, 0, "U", "u" };
-Button btnI = { LIGHT_GREY, WHITE, 0, 0, "I", "i" };
-Button btnO = { LIGHT_GREY, WHITE, 0, 0, "O", "o" };
-Button btnP = { LIGHT_GREY, WHITE, 0, 0, "P", "p" };
-
-Button btnA = { LIGHT_GREY, WHITE, 0, 0, "A", "a" };
-Button btnS = { LIGHT_GREY, WHITE, 0, 0, "S", "s" };
-Button btnD = { LIGHT_GREY, WHITE, 0, 0, "D", "d" };
-Button btnF = { LIGHT_GREY, WHITE, 0, 0, "F", "f" };
-Button btnG = { LIGHT_GREY, WHITE, 0, 0, "G", "g" };
-Button btnH = { LIGHT_GREY, WHITE, 0, 0, "H", "h" };
-Button btnJ = { LIGHT_GREY, WHITE, 0, 0, "J", "j" };
-Button btnK = { LIGHT_GREY, WHITE, 0, 0, "K", "k" };
-Button btnL = { LIGHT_GREY, WHITE, 0, 0, "L", "l" };
-
-Button btnY = { LIGHT_GREY, WHITE, 0, 0, "Y", "y" };
-Button btnX = { LIGHT_GREY, WHITE, 0, 0, "X", "x" };
-Button btnC = { LIGHT_GREY, WHITE, 0, 0, "C", "c" };
-Button btnV = { LIGHT_GREY, WHITE, 0, 0, "V", "v" };
-Button btnB = { LIGHT_GREY, WHITE, 0, 0, "B", "b" };
-Button btnN = { LIGHT_GREY, WHITE, 0, 0, "N", "n" };
-Button btnM = { LIGHT_GREY, WHITE, 0, 0, "M", "m" };
-
+//Wieviele Schaltflächen sollen pro Zeile angezeigt werden?
 int rowButtonCount[4] = {10, 10, 9, 7};
 
+//Maximale Anzahl der Schaltflächen pro Zeile
 const int NUM_BUTTONS = 10;
+//Anzahl der Zeilen
 const int NUM_ROWS = 4;
 Button keyboard[NUM_ROWS][NUM_BUTTONS] = {
-  { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0 },
-  { btnQ, btnW, btnE, btnR, btnT, btnZ, btnU, btnI, btnO, btnP },
-  { btnA, btnS, btnD, btnF, btnG, btnH, btnJ, btnK, btnL, NULL },
-  { btnY, btnX, btnC, btnV, btnB, btnN, btnM}
+  { { 0, 0, "1", "!" }, { 0, 0, "2", "\"" }, { 0, 0, "3", ":" }, { 0, 0, "4", "$" }, { 0, 0, "5", "%" }, { 0, 0, "6", "&" }, { 0, 0, "7", "/" }, { 0, 0, "8", "(" }, { 0, 0, "9", ")" }, { 0, 0, "0", "=" } },
+  { { 0, 0, "Q", "q" }, { 0, 0, "W", "w" }, { 0, 0, "E", "e" }, { 0, 0, "R", "r" }, { 0, 0, "T", "t" }, { 0, 0, "Z", "z" }, { 0, 0, "U", "u" }, { 0, 0, "I", "i" }, { 0, 0, "O", "o" }, { 0, 0, "P", "p" } },
+  { { 0, 0, "A", "a" }, { 0, 0, "S", "s" }, { 0, 0, "D", "d" }, { 0, 0, "F", "f" }, { 0, 0, "G", "g" }, { 0, 0, "H", "h" }, { 0, 0, "J", "j" }, { 0, 0, "K", "k" }, { 0, 0, "L", "l" } },
+  { { 0, 0, "Y", "y" }, { 0, 0, "X", "x" }, { 0, 0, "C", "c" }, { 0, 0, "V", "v" }, { 0, 0, "B", "b" }, { 0, 0, "N", "n" }, { 0, 0, "M", "m" }}
 };
 
-Button btnSymbol1 = { LIGHT_GREY, WHITE, 0, 0, "+", "" };
-Button btnSymbol2 = { LIGHT_GREY, WHITE, 0, 0, "-", "" };
-Button btnSymbol3 = { LIGHT_GREY, WHITE, 0, 0, "/", "" };
-Button btnSymbol4 = { LIGHT_GREY, WHITE, 0, 0, "#", "" };
-Button btnSymbol5 = { LIGHT_GREY, WHITE, 0, 0, "\'", "" };
-Button btnSymbol6 = { LIGHT_GREY, WHITE, 0, 0, "_", "" };
-Button btnSymbol7 = { LIGHT_GREY, WHITE, 0, 0, ".", "" };
-Button btnSymbol8 = { LIGHT_GREY, WHITE, 0, 0, ":", "" };
-Button btnSymbol9 = { LIGHT_GREY, WHITE, 0, 0, ",", "" };
-Button btnSymbol10 = { LIGHT_GREY, WHITE, 0, 0, ";", "" };
-Button btnSymbol11 = { LIGHT_GREY, WHITE, 0, 0, "<", "" };
-Button btnSymbol12 = { LIGHT_GREY, WHITE, 0, 0, ">", "" };
-Button btnSymbol13 = { LIGHT_GREY, WHITE, 0, 0, "|", "" };
-Button btnSymbol14 = { LIGHT_GREY, WHITE, 0, 0, "?", "" };
-Button btnSymbol15 = { LIGHT_GREY, WHITE, 0, 0, "!", "" };
-Button btnSymbol16 = { LIGHT_GREY, WHITE, 0, 0, "{", "" };
-Button btnSymbol17 = { LIGHT_GREY, WHITE, 0, 0, "}", "" };
-Button btnSymbol18 = { LIGHT_GREY, WHITE, 0, 0, "[", "" };
-Button btnSymbol19 = { LIGHT_GREY, WHITE, 0, 0, "]", "" };
-Button btnSymbol20 = { LIGHT_GREY, WHITE, 0, 0, "~", "" };
-
+//Anzahl der Schaltflächen pro Zeile
 const int NUM_BTN_SYMBOL = 5;
+//Anzahl der Zeilen
 const int NUM_BTN_SYMBOL_ROWS = 4;
 
 Button symbols[NUM_BTN_SYMBOL_ROWS][NUM_BTN_SYMBOL] = {
-  {btnSymbol1, btnSymbol2, btnSymbol3, btnSymbol4, btnSymbol5},
-  {btnSymbol6, btnSymbol7, btnSymbol8, btnSymbol9, btnSymbol10},
-  {btnSymbol11, btnSymbol12, btnSymbol13, btnSymbol14, btnSymbol15},
-  {btnSymbol16, btnSymbol17, btnSymbol18, btnSymbol19, btnSymbol20}
+  {{ 0, 0, "+", "" }, { 0, 0, "-", "" }, { 0, 0, "/", "" }, { 0, 0, "#", "" }, { 0, 0, "\'", "" }},
+  {{ 0, 0, "_", "" }, { 0, 0, ".", "" }, { 0, 0, ":", "" }, { 0, 0, ",", "" }, { 0, 0, ";", "" }},
+  {{ 0, 0, "<", "" }, { 0, 0, ">", "" }, { 0, 0, "|", "" }, { 0, 0, "?", "" }, { 0, 0, "!", "" }},
+  {{ 0, 0, "{", "" }, { 0, 0, "}", "" }, { 0, 0, "[", "" }, { 0, 0, "]", "" }, { 0, 0, "~", "" }}
 };
 
 bool isShiftActive = false;
 bool isSymbolActive = false;
 
 String inputText = "";
+
+bool keyboardIsVisible = false;
 
 void setup(void) {
   //beginn der seriellen Kommunikation mit
@@ -175,6 +118,8 @@ void setup(void) {
   lcd.setRotation(1);
   //füllen des Displays mit der Farbe Schwarz
   lcd.fillScreen(BK_GREY);
+  //setzen der Schriftart
+  lcd.setFont(&fonts::Font2);
   //eine kleine Pause von 100ms.
   delay(100);
   showKeyboard();
@@ -191,52 +136,77 @@ void loop() {
     if (x > MAX_X || y > MAX_Y) {
       return;
     }
-    handleKeyboard(x, y);
+
+    //Nur wenn die Bildschirmtastatur sichtbar ist, soll diese behandelt werden.
+    if(keyboardIsVisible){
+      //Aufrufen der Funktion mit den geklickten Koordinaten.
+      handleKeyboard(x, y);
+    }
+    
   }
   //eine Pause von 50 Millisekunden.
   delay(50);
 }
 
+//Zeigt die Bildschirmtastatur an, wird ebenso verwendet um 
+//die Bildschirmtastatur neu zu zeichnen.
 void showKeyboard() {
+  //Die Bildschirmtastatur ist sichtbar!
+  keyboardIsVisible = true;
+  //Koordinaten der Bildschirmtastatur
   start_X = DEFAULT_START_X;
   start_Y = DEFAULT_START_Y;
 
+  //Hintergrundfarbe
   lcd.fillScreen(BK_GREY);
-
+  //Rahmen zeichnen
   lcd.drawRoundRect(30, 30, 250, 155, 10, DARK_GREY);
-
+  
+  //Zeichnen der Funktionstasten
   drawFunctionButton(closeBtn);
-
   drawFunctionButton(backBtn);
+
+  //Wenn die Symbol-Taste aktiviert ist, dann soll
+  //die Shift-Taste nicht gezeichnet werden
   if (!isSymbolActive) {
     drawFunctionButton(shiftBtn);
   }
+
   drawFunctionButton(symbolsBtn);
   drawFunctionButton(spaceBtn);
   drawFunctionButton(okBtn);
 
+  //Zeichnen des Eingabefeldes
   drawInputField(inputField);
 
+  //Wenn nicht die Symbol-Taste aktiviert ist,
+  //dann soll die normale Tastatur gezeichnet werden.
   if (!isSymbolActive) {
+    //Schleifen über die Arrays
     for (int row = 0; row < NUM_ROWS; row++) {
       start_X = DEFAULT_START_X;
+      //Berechnen der X Koordinate für Zeilen größer als 1
       if (row > 0) {
         start_Y = DEFAULT_START_Y + (row * (BTN_HEIGHT + BTN_MARGIN_VERTIKAL));
       }
-
+      //Schleife über die Schaltflächen im Array, zusätzlich wird hier aus dem Array
+      //rowButtonCount die maximale Anzahl entnommen
       for (int btnIndex = 0; btnIndex < rowButtonCount[row]; btnIndex++) {
         int offset_X = 0;
+        //Berechnen eines Offsets 
         if (rowButtonCount[row] < 10 && btnIndex == 0) {
+          //Abhängig von der Anzahl der Schaltflächen soll die Zeile eingerückt werden.
           switch (rowButtonCount[row]) {
             case 9: offset_X = BTN_WIDTH / 2; break;
             case 7: offset_X = BTN_WIDTH * 1.5 + BTN_MARGIN_HORIZONTAL; break;
           }
         }
-
+        //Zeichnen der Bildschirmtastatur
         drawButton(row, btnIndex, keyboard[row][btnIndex], offset_X);
       }
     }
-  } else {
+  } else { //Wenn die Symbol-Taste aktiviert wurde, dann sollen die Sonderzeichen gezeichnet werden
+    //Die Sonderzeichen sind als Block von 5x4 abgelegt.
     for (int row = 0; row < NUM_BTN_SYMBOL_ROWS; row++) {
       start_X = DEFAULT_START_X;
       if (row > 0) {
@@ -253,9 +223,17 @@ void showKeyboard() {
   }
 }
 
+//Aktionen an der Bildschirmtastatur behandeln
+//Als Parameter werden die geklickten Koordinaten am Display erwartet.
 void handleKeyboard(int x, int y) {
+  //Felder ob die komplette Bildschirmtastatur neugezeichnet werden soll, oder
+  //nur das Eingabefeld.
   bool redrawKeyboard = false;
   bool redrawInputField = false;
+  //prüfen ob die Symbold-Taste aktiviert ist.
+  //Hintergrund: Es wird geprüft ob sich an einer X/Y Koordinate eine Schaltfläche
+  //befindet. Da die Bildschirmtastatur jedoch zweischichtig ist, kommt es hier zu
+  //Überlagerungen von Schaltflächen.
   if (!isSymbolActive) {
     for (int row = 0; row < NUM_ROWS; row++) {
       for (int btnIndex = 0; btnIndex < NUM_BUTTONS; btnIndex++) {
@@ -278,22 +256,33 @@ void handleKeyboard(int x, int y) {
     }
   }
 
+  //Prüfen der Funktionstasten
   if (checkCoordButton(closeBtn, x, y)) {
-
+    //Hier wird die Schaltfläche X behandelt.
   } else if (checkCoordButton(shiftBtn, x, y)) {
+    //Wenn die Shift-Taste betätigt wurde dann soll der
+    //boolsche Wert umgekert werden
     isShiftActive = !isShiftActive;
+    //Auf jedenfall soll dann auch die Symboltaste als deaktiviert gelten
     isSymbolActive = false;
+    //neuzeichnen der Bildschirmtastatur, entweder werden nun 
+    //die kleinen Buchstaben oder die großen angezeigt.
     redrawKeyboard = true;
   } else if (checkCoordButton(symbolsBtn, x, y)) {
     isSymbolActive = !isSymbolActive;
     isShiftActive = false;
     redrawKeyboard = true;
   } else if (checkCoordButton(spaceBtn, x, y)) {
+    //Ein Leerzeichen dem Eingabefeld hinzufügen.
     addSignToInputField(" ");
   } else if (checkCoordButton(okBtn, x, y)) {
+    //Hier wird die Schaltfläche OK behandelt.
   } else if (checkCoordButton(backBtn, x, y)) {
+    //Taste zum löschen des letzten Zeichens im Eingabefeld
+    //Wird jedoch nur ausgehührt wenn die Länge des Feldes größer 0 ist.
     if (inputText.length() > 0) {
       inputText = inputText.substring(0, inputText.length() - 1);
+      //nur das Eingabefeld neuzeichnen
       redrawInputField = true;
     }
   }
@@ -305,16 +294,19 @@ void handleKeyboard(int x, int y) {
   }
 }
 
+//Zeichnen einer Funktionstaste
 void drawFunctionButton(ButtonFunction &button) {
-  lcd.setFont(&fonts::Font2);
+  //Wenn die Shift-Taste oder die Symbol-Taste betätigt wurde, dann soll die jeweilige
+  //Taste mit dunkelgrauem hintergrund dargestellt werden.
   if ((button.caption == "SHIFT" && isShiftActive) || (button.caption == "#" && isSymbolActive)) {
-    lcd.fillRoundRect(button.coord_x, button.coord_y, button.width, button.height, button.roundEdge, DARKER_GREY);
+    lcd.fillRoundRect(button.coord_x, button.coord_y, button.width, button.height, BTN_ROUNDEDGE, DARKER_GREY);
     lcd.setTextColor(button.textcolor, DARKER_GREY);
   } else {
-    lcd.fillRoundRect(button.coord_x, button.coord_y, button.width, button.height, button.roundEdge, button.backgroundcolor);
+    lcd.fillRoundRect(button.coord_x, button.coord_y, button.width, button.height, BTN_ROUNDEDGE, button.backgroundcolor);
     lcd.setTextColor(button.textcolor, button.backgroundcolor);
   }
 
+  //Die Leertaste ist deutlich länger und damit der Text zentriert angezeigt wird, muss hier eine If-Bedingung erfolgen.
   if (button.caption == "Space") {
     lcd.setCursor(button.coord_x + 50, button.coord_y + 3);
   } else {
@@ -341,23 +333,27 @@ void drawInputField(InputField inputField) {
 
 //Zeichnen eines Buttons
 void drawButton(int row, int btnIndex, Button &button, int offset_X) {
+  
   int x = start_X + offset_X;
+  //Für den ersten Button die Berechnung der neuen X Koordinate überspringen
   if (btnIndex > 0) {
     x = start_X + (BTN_WIDTH + BTN_MARGIN_HORIZONTAL) + offset_X;
   }
 
+  // Y Koordinate vom durchlauf zuvor verwenden
   int y = start_Y;
 
-  lcd.fillRoundRect(x, y, BTN_WIDTH, BTN_HEIGHT, 2, button.backgroundcolor);
+  lcd.fillRoundRect(x, y, BTN_WIDTH, BTN_HEIGHT, 2, LIGHT_GREY);
 
-  lcd.setTextColor(button.textcolor, button.backgroundcolor);
+  lcd.setTextColor(WHITE, LIGHT_GREY);
   lcd.setCursor(x + 7, y + 2);
 
   lcd.print(isShiftActive ? button.caption2 : button.caption1);
 
+  //Speichern der Koordinaten am Button
   button.coord_x = x;
   button.coord_y = y;
-
+  //Speichern der Koordinaten an den Feldern für den nächsten durchlauf
   start_X = x;
   start_Y = y;
 }

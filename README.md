@@ -61,6 +61,6 @@ Du benötigst zum Anzeigen dann das kleine Programm "LittleFS_PNG" aus den Beisp
 
 #### Spiel Vier gewinnt
 
-[Quellcode für das Spiel Vier gewinnt auf dem ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_VierGewinnt))
+[Quellcode für das Spiel Vier gewinnt auf dem ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/tree/main/beispiele/TFT-Display/ESP32_Development_Board_VierGewinnt)
 
 ![das Spiel Vier gewinnt auf dem ESP32-2432S028R](https://github.com/StefanDraeger/ESP32_Development_Board_ESP32-2432S028R/blob/main/bilder/ESP32_Development_Board_Vier_gewinnt_2.jpg)
